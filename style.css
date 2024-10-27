@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+header.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('img/reboque\ fudca.jfif'); /* Adicione uma imagem de fundo profissional */
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    color: whitesmoke;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-text h1 {
+    font-size: 3vw;
+    font-weight: 700;
+    margin-bottom: 1vh;
+}
+
+.hero-text p {
+    font-size: 2vw;
+    font-weight: 300;
+    margin-bottom: 2vh;
+}
+
+.hero-button {
+    padding: 10px 20px;
+    background-color: #25D366;
+    color: white;
+    font-size: 2vw;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #1ebe5a;
+}
+
+.about-section, .experience-section {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 0 5%;
+}
+
+.about-section h2, .experience-section h2 {
+    font-size: 2.5vw;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.about-section p, .experience-section p {
+    font-size: 1.5vw;
+    color: #555;
+    margin: 10px 0;
+}
+
+.carousel-section {
+    text-align: center;
+    margin: 20px auto;
+    padding: 0 5%;
+}
+
+.carousel-section h2 {
+    font-size: 2.5vw;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.carousel-container {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    position: relative; /* Permite que a posição absoluta funcione corretamente */
+}
+
+.carousel-item {
+    display: none; /* Esconder todas as imagens inicialmente */
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease-in-out; /* Transição suave */
+}
+
+.cta-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #25D366;
+    color: white;
+}
+
+.cta-section p {
+    font-size: 2vw;
+    margin-bottom: 20px;
+}
+
+.whatsapp-button, .phone-number {
+    background-color: white;
+    color: #25D366;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 2vw;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.whatsapp-button:hover, .phone-number:hover {
+    background-color: #1ebe5a;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 5vw;
+    }
+
+    .hero-text p {
+        font-size: 4vw;
+    }
+
+    .carousel-item {
+        max-height: 300px; /* Limitar a altura das imagens do carrossel */
+    }
+
+    .hero-button {
+        padding: 10px 15px;
+        font-size: 4vw;
+    }
+
+    .about-section h2, .experience-section h2 {
+        font-size: 4vw;
+    }
+
+    .about-section p, .experience-section p {
+        font-size: 3vw;
+    }
+
+    .cta-section p {
+        font-size: 3vw;
+    }
+
+    footer p {
+        font-size: 2vw;
+    }
+}

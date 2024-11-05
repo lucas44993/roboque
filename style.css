@@ -19,7 +19,7 @@ header.hero-section {
     background-size: cover;
     background-position: center;
     height: 60vh;
-    color: whitesmoke;
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 20px;
 }
@@ -49,6 +49,26 @@ header.hero-section {
 
 .hero-button:hover {
     background-color: #1ebe5a;
+}
+
+/* Estilo do novo botão WhatsApp */
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center; /* Centraliza o ícone e o texto */
+    gap: 10px; /* Espaço entre o ícone e o texto */
+    background-color: #25D366;
+    color: white;
+    padding: 15px 30px; /* Aumenta o tamanho do botão */
+    text-decoration: none;
+    border-radius: 40px;
+    font-size: 2.5vw; /* Tamanho da fonte um pouco maior */
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E; /* Cor mais escura ao passar o mouse */
+    color: white;
 }
 
 .about-section, .experience-section {
@@ -86,7 +106,7 @@ header.hero-section {
     display: flex;
     overflow: hidden;
     justify-content: center;
-    position: relative; /* Permite que a posição absoluta funcione corretamente */
+    position: relative;
 }
 
 .carousel-item {
@@ -95,7 +115,7 @@ header.hero-section {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: opacity 0.5s ease-in-out; /* Transição suave */
+    transition: opacity 0.5s ease-in-out;
 }
 
 .cta-section {
@@ -108,22 +128,6 @@ header.hero-section {
 .cta-section p {
     font-size: 2vw;
     margin-bottom: 20px;
-}
-
-.whatsapp-button, .phone-number {
-    background-color: white;
-    color: #25D366;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 30px;
-    font-size: 2vw;
-    font-weight: 500;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.whatsapp-button:hover, .phone-number:hover {
-    background-color: #1ebe5a;
-    color: white;
 }
 
 footer {
@@ -148,7 +152,7 @@ footer p {
     }
 
     .carousel-item {
-        max-height: 300px; /* Limitar a altura das imagens do carrossel */
+        max-height: 300px;
     }
 
     .hero-button {

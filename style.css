@@ -15,13 +15,15 @@ header.hero-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('img/reboque\ fudca.jfif'); /* Adicione uma imagem de fundo profissional */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('img/carropreto.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center center;
+    background-repeat: no-repeat;
     height: 60vh;
-    color: rgb(255, 255, 255);
+    color: #fff;
     text-align: center;
     padding: 20px;
+    position: relative;
 }
 
 .hero-text h1 {
@@ -54,37 +56,45 @@ header.hero-section {
 /* Estilo do novo botão WhatsApp */
 .whatsapp-button {
     display: inline-flex;
-    align-items: center; /* Centraliza o ícone e o texto */
-    gap: 10px; /* Espaço entre o ícone e o texto */
+    align-items: center;
+    /* Centraliza o ícone e o texto */
+    gap: 10px;
+    /* Espaço entre o ícone e o texto */
     background-color: #25D366;
     color: white;
-    padding: 15px 30px; /* Aumenta o tamanho do botão */
+    padding: 15px 30px;
+    /* Aumenta o tamanho do botão */
     text-decoration: none;
     border-radius: 40px;
-    font-size: 2.5vw; /* Tamanho da fonte um pouco maior */
+    font-size: 2.5vw;
+    /* Tamanho da fonte um pouco maior */
     font-weight: 600;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .whatsapp-button:hover {
-    background-color: #128C7E; /* Cor mais escura ao passar o mouse */
+    background-color: #128C7E;
+    /* Cor mais escura ao passar o mouse */
     color: white;
 }
 
-.about-section, .experience-section {
+.about-section,
+.experience-section {
     text-align: center;
     margin: 20px auto;
     max-width: 800px;
     padding: 0 5%;
 }
 
-.about-section h2, .experience-section h2 {
+.about-section h2,
+.experience-section h2 {
     font-size: 2.5vw;
     margin-bottom: 10px;
     color: #333;
 }
 
-.about-section p, .experience-section p {
+.about-section p,
+.experience-section p {
     font-size: 1.5vw;
     color: #555;
     margin: 10px 0;
@@ -92,30 +102,91 @@ header.hero-section {
 
 .carousel-section {
     text-align: center;
-    margin: 20px auto;
+    margin: 40px auto;
     padding: 0 5%;
 }
 
 .carousel-section h2 {
-    font-size: 2.5vw;
-    margin-bottom: 20px;
-    color: #333;
+    font-size: 2.2vw;
+    margin-bottom: 18px;
+    color: #222;
 }
 
 .carousel-container {
     display: flex;
-    overflow: hidden;
     justify-content: center;
+    align-items: center;
     position: relative;
+    max-width: 420px;
+    margin: 0 auto 20px auto;
+    height: 260px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+    overflow: hidden;
 }
 
 .carousel-item {
-    display: none; /* Esconder todas as imagens inicialmente */
+    display: none;
     max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: opacity 0.5s ease-in-out;
+    max-height: 240px;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+    margin: 0 auto;
+    transition: opacity 0.5s;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(37, 211, 102, 0.85);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 2;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+}
+
+#prevBtn.carousel-btn {
+    left: 10px;
+}
+
+#nextBtn.carousel-btn {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background: #128C7E;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.carousel-indicator {
+    width: 12px;
+    height: 12px;
+    background: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.carousel-indicator.active {
+    background: #25D366;
 }
 
 .cta-section {
@@ -160,11 +231,13 @@ footer p {
         font-size: 4vw;
     }
 
-    .about-section h2, .experience-section h2 {
+    .about-section h2,
+    .experience-section h2 {
         font-size: 4vw;
     }
 
-    .about-section p, .experience-section p {
+    .about-section p,
+    .experience-section p {
         font-size: 3vw;
     }
 
@@ -174,5 +247,17 @@ footer p {
 
     footer p {
         font-size: 2vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .carousel-container {
+        max-width: 98vw;
+        height: 160px;
+    }
+
+    .carousel-item {
+        height: 140px;
+        max-height: 140px;
     }
 }
